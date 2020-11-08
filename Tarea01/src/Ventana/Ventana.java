@@ -14,6 +14,7 @@ public class Ventana extends JFrame{
 	JButton boton1;
 	JButton boton2;
 	JButton boton3;
+	JButton boton4;
 	JPanel panel;
 
 	ActionListener rojo;
@@ -28,6 +29,7 @@ public class Ventana extends JFrame{
 		fondoRojo();
 		fondoVerde();
 		fondoAzul();
+		actividadUsuario();
 
 		
 	}
@@ -46,15 +48,18 @@ public class Ventana extends JFrame{
 		boton1= new JButton("Rojo");
 		boton2= new JButton("Verde");
 		boton3= new JButton("Azul");
+		boton4= new JButton("Actividad del usuario");
 		boton1.setBounds(50, 100, 100, 40);
 		boton1.setForeground(Color.RED);
 		boton2.setBounds(200, 100, 100, 40);
 		boton2.setForeground(Color.GREEN);
 		boton3.setBounds(350, 100, 100, 40);
 		boton3.setForeground(Color.BLUE);
+		boton4.setBounds(50, 300, 180, 40);
 		panel.add(boton1);
 		panel.add(boton2);
 		panel.add(boton3);
+		panel.add(boton4);
 			
 	}
 	
@@ -99,6 +104,21 @@ public class Ventana extends JFrame{
 		boton3.addActionListener(azul);
 		
 	}
+	
+	public void actividadUsuario() {
+		ActionListener actividad= new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg2) {
+				System.out.println("Informacion");
+				
+				
+			}			
+		};
+		boton4.addActionListener(actividad);
+		
+	}
+	
 	
 	
 
